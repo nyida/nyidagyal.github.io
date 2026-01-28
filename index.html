@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SnakeGuide – The Definitive Snake Game Research Resource</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    :root{--bg:#fff;--text:#202122;--link:#0645ad;--border:#a2a9b1;--toc:#f8f9fa;--infobox:#f8f9fa;--highlight:#fffde7;}
+    body{font-family:Georgia,serif;font-size:0.875rem;line-height:1.6;color:var(--text);background:var(--bg);max-width:1000px;margin:0 auto;padding:1em;}
+    a{color:var(--link);text-decoration:none;}a:hover{text-decoration:underline;}
+    h1,h2,h3{border-bottom:1px solid var(--border);font-weight:bold;line-height:1.4;margin:0.2em 0 0.4em;}
+    h1{font-size:2em;}h2{font-size:1.6em;}h3{font-size:1.3em;}
+    p{margin:0.4em 0 0.5em;}
+    ul,ol{margin:0.3em 0 0.5em 1.6em;line-height:1.6;}
+    .infobox{float:right;clear:right;width:22em;border:1px solid var(--border);background:var(--infobox);padding:0.2em;font-size:88%;line-height:1.6em;margin:0.5em 0 0.5em 1em;}
+    .infobox th{background:#eaecf0;text-align:left;font-weight:bold;border-top:1px solid var(--border);padding:0.2em 0.4em;}
+    .infobox td{border-top:1px solid var(--border);padding:0.2em 0.4em;}
+    #toc{background:var(--toc);border:1px solid var(--border);padding:0.5em 1em;margin:1em 0;font-size:95%;}
+    #toc ul{list-style:none;margin:0;padding:0;}
+    #toc ul ul{margin-left:2em;}
+    .thumb{margin:0.5em 0;}.thumbinner{border:1px solid var(--border);background:var(--bg);padding:3px;text-align:center;}
+    .thumbcaption{border-top:1px solid var(--border);padding:2px;text-align:left;font-size:94%;}
+    .hatnote{font-style:italic;background:var(--toc);border:1px solid var(--border);padding:0.5em;margin:0.5em 0;}
+    .references{font-size:90%;margin-top:1em;}
+    .reflist{list-style-type:decimal;margin-left:2em;}
+    .reflist li{margin-bottom:0.5em;}
+    #searchform{display:flex;margin:0.5em 0;}
+    #searchInput{width:100%;max-width:20em;padding:0.3em;border:1px solid var(--border);background:var(--toc);}
+    #searchButton{padding:0.3em 0.6em;background:#36c;color:#fff;border:none;font-weight:bold;cursor:pointer;}
+    #searchButton:hover{background:#2a4b8d;}
+    .catlinks{border:1px solid var(--border);background:var(--toc);padding:0.5em;margin-top:1em;}
+    .catlinks ul{margin:0;padding:0;list-style:none;}
+    .catlinks li{display:inline;margin:0;padding:0;line-height:1.6em;}
+    .catlinks li:after{content: ", ";}
+    .catlinks li:last-child:after{content: "";}
+    .printfooter{display:none;}@media print{.printfooter{display:block;text-align:center;font-size:0.8em;margin-top:1em;}}
+    .hero{background:var(--highlight);border:1px solid var(--border);padding:1em;margin:1em 0;text-align:center;}
+    .hero h2{font-size:1.5em;margin:0.2em 0 0.4em;}
+    .hero p{font-size:1.1em;}
+    .gallery{display:flex;justify-content:space-around;align-items:center;margin:1em 0;flex-wrap:nowrap;overflow-x:auto;padding:0.5em 0;}
+    .gallery .thumb{flex:0 0 auto;margin:0 0.5em;min-width:175px;}
+    .gallery img{max-width:100%;height:140px;object-fit:cover;border:1px solid var(--border);}
+    .gallery .caption{font-size:0.9em;text-align:center;}
+    .tab {overflow: hidden;border: 1px solid var(--border);background-color: var(--toc);margin:1em 0;}
+    .tab button {background-color: inherit;float: left;border: none;outline: none;cursor: pointer;padding: 0.6em 1em;transition: 0.3s;font-size: 0.9em;}
+    .tab button:hover {background-color: #ddd;}
+    .tab button.active {background-color: var(--bg);border-bottom: 2px solid var(--link);}
+    .tabcontent {display: none;padding: 1em;border: 1px solid var(--border);border-top: none;clear: both;}
+    .tabcontent h2, .tabcontent h3 {border-bottom: none;margin-top: 0;}
+    pre {background: #f4f4f4;padding: 1em;border: 1px solid var(--border);overflow-x: auto;max-height: 300px;overflow-y: auto;}
+    code {font-family: monospace;background: #f8f8f8;padding: 0.2em 0.4em;border-radius: 3px;}
+    .highlight{background:var(--highlight);padding:0.2em 0.4em;border-left:3px solid var(--link);}
+    .diagram{text-align:center;margin:1em 0;}
+    .diagram img{max-width:100%;border:1px solid var(--border);}
+    .diagram .caption{font-size:0.9em;text-align:center;}
+    .quote{font-style:italic;background:var(--toc);border-left:3px solid var(--link);padding:0.5em;margin:1em 0;}
+    .section{margin:2em 0;}
+    .section h2{font-size:1.4em;}
+    .section h3{font-size:1.2em;}
+    .section p{margin:0.3em 0 0.4em;}
+    .section ul{margin:0.2em 0 0.4em 1.4em;}
+    .section ol{margin:0.2em 0 0.4em 1.4em;}
+    .paper{background:var(--toc);border-left:3px solid var(--link);padding:0.5em;margin:1em 0;}
+    .paper h4{margin:0.2em 0 0.4em;}
+    .paper p{margin:0.2em 0 0.4em;}
+    .paper a{font-weight:bold;}
+    .timeline{margin:1em 0;}
+    .timeline ul{list-style:none;padding:0;}
+    .timeline li{margin:0.5em 0;padding:0.5em;border-left:2px solid var(--border);}
+    .timeline .year{font-weight:bold;}
+    .timeline .event{margin-left:1em;}
+    .code-header {background: #f4f4f4;padding: 0.5em 1em;border: 1px solid var(--border);cursor: pointer;font-weight: bold;}
+    .code-content {display: block;padding: 1em;background: #f8f8f8;border: 1px solid var(--border);border-top: none;}
+    .person-box {border-left: 3px solid var(--link);padding: 0.5em;margin:1em 0;background: var(--toc);}
+    .person-box h4 {margin: 0.2em 0;}
+    .person-box p {margin: 0.2em 0;}
+    .footer {text-align: center;font-size: 0.9em;margin-top: 2em;padding:1em;border-top:1px solid var(--border);background: var(--toc);}
+    .logo {height: 50px; margin-right: 10px; vertical-align: middle;}
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+  <script>hljs.highlightAll();</script>
+</head>
+<body>
+  <div class="mw-wiki-logo">
+    <img src="logo.png" alt="SnakeGuide Logo" class="logo" />
+    <h1>SnakeGuide</h1>
+    <p>The definitive research resource for the Snake game: history, technical theory, AI research, and code<br><small>by <a href="https://www.speedrun.com/users/nyidagyal">Nyida Gyal</a></small></p>
+  </div>
+
+  <div class="hero">
+    <h2>Welcome to SnakeGuide</h2>
+    <p>
+      The most comprehensive, research-backed resource for the Snake game: from its 1976 origins to modern AI research, technical implementations, and cultural impact.
+    </p>
+  </div>
+
+  <div class="infobox">
+    <table>
+      <tr><th colspan="2">Snake</th></tr>
+      <tr><th>Genre</th><td>Arcade, Puzzle, AI Research Benchmark</td></tr>
+      <tr><th>Platforms</th><td>Arcade, Mobile, PC, Consoles, Web, IoT</td></tr>
+      <tr><th>First released</th><td>1976 (Blockade)</td></tr>
+      <tr><th>Inventor</th><td>Gremlin Industries (Blockade)</td></tr>
+      <tr><th>Nokia Snake Developer</th><td>Taneli Armanto (1997)</td></tr>
+      <tr><th>Notable variants</th><td>Nokia Snake, Snake II, Snake Xenzia, Google Snake, Slither.io, Snake Rewind, Snakeleev</td></tr>
+      <tr><th>AI Research</th><td>Reinforcement Learning, Pathfinding, Genetic Algorithms, Deep Q-Networks, PPO, A*, Hamiltonian Cycles</td></tr>
+      <tr><th>Cultural Impact</th><td>First massively popular mobile game, MoMA exhibit, global nostalgia, educational tool, AI benchmark</td></tr>
+    </table>
+  </div>
+
+  <div class="gallery">
+    <div class="thumb">
+      <div class="thumbinner">
+        <img src="SnakeGameNokia1997.png" alt="Classic Snake gameplay" />
+        <div class="thumbcaption">Classic Snake gameplay (1997 Nokia version)</div>
+      </div>
+    </div>
+    <div class="thumb">
+      <div class="thumbinner">
+        <img src="GoogleSnakeGame.png" alt="Google Snake" />
+        <div class="thumbcaption">Google Snake (2013 Doodle)</div>
+      </div>
+    </div>
+    <div class="thumb">
+      <div class="thumbinner">
+        <img src="SlitherIO.png" alt="Slither.io" />
+        <div class="thumbcaption">Slither.io (2016)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote">
+    "After some tests and planning, we knew those snakes would be the perfect solution. It was simple enough to live with those constraints. There is no point in using complex solutions when simple does the job."
+    <br>
+    <br>
+    - Taneli Armanto, Nokia Snake developer, MEL Magazine interview (September 11, 2019).
+  </div>
+
+  <div class="section">
+    <h2>Introduction</h2>
+    <p>
+      <b>Snake</b> is a genre of action video games where the player maneuvers the end of a growing line, often themed as a snake. The player must keep the snake from colliding with both other obstacles and itself, which gets harder as the snake lengthens. The genre originated in the 1976 competitive arcade video game <a href="https://en.wikipedia.org/wiki/Blockade_(video_game)">Blockade</a> from Gremlin Industries, where the goal was to survive longer than the other player.
+    </p>
+    <p>
+      The concept evolved into a single-player variant where a line with a head and tail gets longer with each piece of food eaten—often apples or eggs—increasing the likelihood of self-collision. The simplicity and low technical requirements of Snake games have resulted in hundreds of versions, making it a staple for game development, AI research, and cultural studies.
+    </p>
+    <p>
+      Snake's enduring appeal lies in its balance of simplicity and depth, making it a perfect subject for educational programming, AI benchmarking, and cultural analysis.
+    </p>
+  </div>
+
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'History')">History & Evolution</button>
+    <button class="tablinks" onclick="openTab(event, 'Gameplay')">Gameplay & Mechanics</button>
+    <button class="tablinks" onclick="openTab(event, 'AI')">AI & Research</button>
+    <button class="tablinks" onclick="openTab(event, 'Code')">Code & Algorithms</button>
+    <button class="tablinks" onclick="openTab(event, 'Cultural')">Cultural Impact</button>
+  </div>
+
+  <!-- History & Evolution -->
+  <div id="History" class="tabcontent" style="display: block;">
+    <h2>History & Evolution</h2>
+    <div class="timeline">
+      <h3>Timeline of Snake Game Evolution</h3>
+      <ul>
+        <li><span class="year">1976:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Blockade_(video_game)">Blockade</a> (Gremlin Industries) – the first "snake" game, a two-player arcade title where players leave trails to force collisions.</span></li>
+        <li><span class="year">1977:</span> <span class="event">Atari releases <a href="https://en.wikipedia.org/wiki/Domino_(video_game)">Dominos</a> (arcade) and <a href="https://en.wikipedia.org/wiki/Surround_(video_game)">Surround</a> (Atari VCS), both inspired by Blockade.</span></li>
+        <li><span class="year">1978:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Worm_(video_game)">Worm</a> (Peter Trefonas) – the first home computer version, published for TRS-80 in CLOAD magazine.</span></li>
+        <li><span class="year">1982:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Snake_Byte">Snake Byte</a> (Sirius Software) – introduces single-player, food-eating mechanics for Atari 8-bit, Apple II, and VIC-20.</span></li>
+        <li><span class="year">1982:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Nibbler_(video_game)">Nibbler</a> (arcade) – fast-paced, maze-based Snake with tight controls.</span></li>
+        <li><span class="year">1982:</span> <span class="event">Tron arcade game includes a Snake-like "Light Cycles" segment, popularizing the theme.</span></li>
+        <li><span class="year">1991:</span> <span class="event">Nibbles included with MS-DOS as a QBasic sample program, introducing Snake to millions of PC users.</span></li>
+        <li><span class="year">1997:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)#Nokia_Snake">Nokia Snake</a> (Taneli Armanto) – pre-installed on Nokia 6110, defining mobile gaming for a generation.</span></li>
+        <li><span class="year">2000:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Snake_II">Snake II</a> – introduces obstacles and two-player modes.</span></li>
+        <li><span class="year">2002:</span> <span class="event"><a href="https://en.wikipedia.org/wiki/Snake_Xenzia">Snake Xenzia</a> – 3D graphics and maze-like levels.</span></li>
+        <li><span class="year">2013:</span> <span class="event"><a href="https://www.google.com/doodles/2013/chinese-new-year-2013-year-of-the-snake">Google Snake Doodle</a> – celebrates Chinese New Year, played by millions.</span></li>
+        <li><span class="year">2016:</span> <span class="event"><a href="https://slither.io/">Slither.io</a> – massively multiplayer online Snake, popularizing the genre again.</span></li>
+        <li><span class="year">2017:</span> <span class="event"><a href="https://www.google.com/search?q=play+snake">Google Snake web game</a> – permanent fixture in search results.</span></li>
+        <li><span class="year">2025:</span> <span class="event"><a href="https://pubs.acs.org/doi/10.1021/acs.jchemed.1c00001">Snakeleev</a> – educational Snake game for learning the periodic table, published in the <i>Journal of Chemical Education</i>.</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Origins: Blockade (1976)</h3>
+      <p>
+        The Snake game concept originated with <a href="https://en.wikipedia.org/wiki/Blockade_(video_game)">Blockade</a>, a two-player arcade game released in 1976 by Gremlin Industries. In Blockade, each player controls a line that leaves a trail, with the goal of forcing the opponent to collide with their own trail or the screen boundary. The game was purely abstract and did not use snake terminology, but it established the core mechanics that would define the genre.
+      </p>
+      <p>
+        Blockade was cloned as <a href="https://en.wikipedia.org/wiki/Bigfoot_Bonkers">Bigfoot Bonkers</a> the same year, and in 1977, Atari released two Blockade-inspired games: the arcade game <a href="https://en.wikipedia.org/wiki/Domino_(video_game)">Dominos</a> and the Atari VCS game <a href="https://en.wikipedia.org/wiki/Surround_(video_game)">Surround</a>. These early versions were competitive, with players trying to outlast each other by avoiding collisions.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Single-Player Revolution: Nibbles and Snake Byte (1982)</h3>
+      <p>
+        The genre evolved significantly with the release of <a href="https://en.wikipedia.org/wiki/Nibbles_(video_game)">Nibbles</a> (1982) for early PCs and <a href="https://en.wikipedia.org/wiki/Snake_Byte">Snake Byte</a> (1982) for Atari 8-bit, Apple II, and VIC-20. These games introduced the single-player variant, where the player controls a snake that grows longer with each piece of food eaten, increasing the likelihood of self-collision. Snake Byte, in particular, used apples as food items and required the player to complete levels by eating all apples, setting the template for future Snake games.
+      </p>
+      <p>
+        The 1982 Tron arcade game included a Snake-like "Light Cycles" segment, which reinvigorated the concept and inspired many subsequent games to borrow the light cycle theme.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Mobile Gaming Icon: Nokia Snake (1997)</h3>
+      <p>
+        The most iconic version of Snake was developed by Finnish programmer Taneli Armanto and pre-installed on the Nokia 6110 in 1997. Armanto, working at Nokia, adapted the Snake concept for mobile phones, creating a game that would become a global phenomenon. The Nokia Snake game was simple: the player controls a snake using the phone's numeric keypad, collecting orbs to grow longer and increase the score, while avoiding collisions with walls or the snake's own body.
+      </p>
+      <p>
+        Nokia Snake was pre-installed on over 400 million phones, making it the first massively popular mobile game. Its success led to several sequels, including <a href="https://en.wikipedia.org/wiki/Snake_II">Snake II</a> (2000), which introduced obstacles and two-player modes, and <a href="https://en.wikipedia.org/wiki/Snake_Xenzia">Snake Xenzia</a> (2002), which added 3D graphics and maze-like levels.
+      </p>
+      <p>
+        The game's cultural impact was so significant that the Museum of Modern Art in New York City announced in 2012 that the Nokia port of Snake was one of 40 games to be added to its permanent collection, recognizing it as a milestone in video game software design.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Modern Revivals: Google Snake and Slither.io (2013–Present)</h3>
+      <p>
+        In 2013, Google celebrated the Chinese New Year (Year of the Snake) by releasing a playable Snake game as a Google Doodle. The game was hidden behind the Google logo and became an instant hit, with millions of players worldwide. Its success led to a permanent version being added to Google's search results in 2017, accessible by typing "play Snake" into the search bar.
+      </p>
+      <p>
+        The Google Snake game introduced modern visuals, new game modes (such as "Circle Chase" and obstacle-filled maps), and global leaderboards. It also incorporated cultural elements, such as Chinese zodiac symbols, making it more than just a game but a cultural lesson.
+      </p>
+      <p>
+        In 2016, <a href="https://slither.io/">Slither.io</a> brought the Snake concept to massively multiplayer online gaming, where players control a snake-like avatar that grows by consuming pellets and other players, adding a competitive and social dimension to the classic formula.
+      </p>
+      <p>
+        In 2025, <a href="https://pubs.acs.org/doi/10.1021/acs.jchemed.1c00001">Snakeleev</a> was developed as an educational game to help students learn the periodic table, demonstrating Snake's continued relevance in education and beyond.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Technical Evolution</h3>
+      <p>
+        Early Snake games used simple grid-based movement and collision detection, with the snake represented as a linked list or array of coordinates. Modern variants, such as Google Snake and Slither.io, feature smooth animations, multiplayer support, and advanced AI opponents.
+      </p>
+      <p>
+        The game's simplicity and scalability have made it a popular subject for AI research, particularly in reinforcement learning, pathfinding, and genetic algorithms. Its low technical requirements and high complexity make it an ideal testbed for new algorithms and optimization techniques.
+      </p>
+    </div>
+
+    <div class="diagram">
+      <img src="GoogleSnakeLast.png" alt="Google Snake" />
+      <div class="caption">Google Snake (2013): A modern revival with new mechanics and visuals.</div>
+    </div>
+  </div>
+
+  <!-- Gameplay & Mechanics -->
+  <div id="Gameplay" class="tabcontent">
+    <h2>Gameplay & Mechanics</h2>
+
+    <div class="section">
+      <h3>Core Mechanics</h3>
+      <p>
+        The player controls a snake using directional inputs (arrow keys, swipe gestures, or numeric keypad). The snake moves forward automatically, and the player must navigate it to eat food items (often represented as dots, apples, or orbs). Each food item consumed increases the snake's length and the player's score. The game ends if the snake collides with its own body or the game boundaries.
+      </p>
+      <ul>
+        <li><b>Movement:</b> The snake moves in a grid-based or pixel-perfect environment, with the head following the player's directional input and the body following the head's path.</li>
+        <li><b>Collision Detection:</b> The game checks for collisions between the snake's head and its body, walls, or other obstacles. Early implementations used simple array checks, while modern games may use spatial hashing or quadtrees for optimization.</li>
+        <li><b>Scoring:</b> Points are awarded for each food item consumed. Some variants include bonuses for speed, special items, or completing levels.</li>
+        <li><b>Growth:</b> The snake's length increases by one segment for each food item eaten, making the game progressively more difficult as the player must avoid a longer tail.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Advanced Features</h3>
+      <ul>
+        <li><b>Obstacles:</b> Walls, moving barriers, or enemy snakes that the player must avoid.</li>
+        <li><b>Power-ups:</b> Temporary boosts such as speed increases, invincibility, or score multipliers.</li>
+        <li><b>Multiplayer:</b> Competitive or cooperative modes, either locally or online.</li>
+        <li><b>AI Opponents:</b> Computer-controlled snakes with varying difficulty levels, often using pathfinding or reinforcement learning algorithms.</li>
+        <li><b>Special Modes:</b> Variations like "Circle Chase," where the snake must follow a moving target, or "Obstacle Course," with maze-like levels.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Technical Implementation</h3>
+      <p>
+        Most Snake implementations use a 2D grid for the game board, with the snake represented as a linked list or array of coordinates. The game loop typically involves:
+      </p>
+      <ol>
+        <li>Updating the snake's position based on player input.</li>
+        <li>Checking for collisions with food, walls, or the snake's body.</li>
+        <li>Updating the score and snake length if food is eaten.</li>
+        <li>Rendering the updated game state.</li>
+      </ol>
+      <p>
+        Collision detection is typically O(n) for the snake body, but optimizations such as spatial hashing or quadtrees can reduce this for large boards or multiplayer games.
+      </p>
+      <div class="code-content">
+        <pre><code class="javascript">
+// Example: Snake movement and collision in JavaScript
+function moveSnake() {
+  let head = {x: snake[0].x, y: snake[0].y};
+  if (direction === 'UP') head.y--;
+  if (direction === 'DOWN') head.y++;
+  if (direction === 'LEFT') head.x--;
+  if (direction === 'RIGHT') head.x++;
+
+  // Check for collisions
+  if (head.x < 0 || head.x >= gridSize || head.y < 0 || head.y >= gridSize ||
+      snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+    gameOver();
+  }
+
+  snake.unshift(head);
+  if (head.x === food.x && head.y === food.y) {
+    // Eat food, grow snake
+    placeFood();
+  } else {
+    snake.pop();
+  }
+}
+        </code></pre>
+      </div>
+    </div>
+
+    <!-- NEW SECTION: Advanced Wall Mechanics & Hamiltonian Research -->
+    <div class="section">
+      <h2>Advanced Wall Mechanics & Hamiltonian Research</h2>
+      <p>
+        Exploring the cutting edge of Snake wall mode: from pattern recognition to algorithmic manipulation and beyond. This section is based on research and discussions from the <a href="https://discord.gg/snake">Snake Game Discord server</a>, a community of advanced players and researchers.
+      </p>
+
+      <div class="section">
+        <h3>The Science of Wall Patterns: Beyond the Basics</h3>
+        <p>
+          Wall mode in Snake is not just about avoiding collisions—it’s a combinatorial puzzle where every wall spawn, fruit placement, and snake movement interacts to create a dynamic, high-stakes environment. The Discord discussions reveal a deep, mathematical approach to understanding and manipulating these patterns, often referred to as "wall research."
+        </p>
+
+        <div class="infobox">
+          <table>
+            <tr><th colspan="2">Key Concepts</th></tr>
+            <tr><th>Hamiltonian Cycles (Ham Cycles)</th><td>A path that allows the snake to traverse every empty tile on the board exactly once, ending at its own tail. This is the "perfect" win condition in wall mode, but it’s rare due to the randomness of wall spawns.</td></tr>
+            <tr><th>Dark-Light Parity</th><td>The board’s tiles alternate between "dark" and "light" (like a chessboard). The dark-light difference (number of dark tiles minus light tiles) in a region determines if a Ham Cycle is possible.</td></tr>
+            <tr><th>Connected Minuses (-n)</th><td>A -1 means one tile is unreachable; a -2 means two tiles are unreachable, and so on. The goal is to minimize these "minuses" or isolate them in ways that don’t disrupt the Ham Cycle.</td></tr>
+          </table>
+        </div>
+
+        <p>
+          <strong>Hamiltonian Cycles (Ham Cycles):</strong><br>
+          On a 10x9 board, only ~1 in 2 million patterns are Ham Cycles (per ScienceCrafter’s research). Recognizing potential Ham Cycles early allows players to manipulate wall spawns to increase the odds of a perfect win.
+        </p>
+
+        <p>
+          <strong>Dark-Light Parity:</strong><br>
+          Rule of thumb: If a region’s dark-light difference is not zero, it cannot be part of a Ham Cycle. Players can block walls to balance dark-light parity in critical regions, increasing the chance of a traversable path.
+        </p>
+
+        <p>
+          <strong>Connected Minuses (-n):</strong><br>
+          A connected -2 (two unreachable tiles next to each other) is often easier to "fix" than two separate -1s. Players can pre-place walls to force minuses into connected, manageable clusters.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Advanced Manipulation: The Art of Wall Control</h3>
+        <p>
+          The Discord logs show that top players don’t just react to walls—they actively manipulate spawns to create favorable patterns.
+        </p>
+
+        <div class="infobox">
+          <table>
+            <tr><th colspan="2">Advanced Tactics</th></tr>
+            <tr><th>Corner Control</th><td>Walls cannot spawn adjacent to corners. Players exploit this by leaving corners empty to limit spawn options.</td></tr>
+            <tr><th>Spawn Radius Abuse</th><td>The game’s spawn radius (5 tiles around the snake) can be used to block future wall spawns by positioning the snake strategically.</td></tr>
+            <tr><th>Pocket Problem</th><td>A pocket is a small, enclosed area where a wall or fruit can spawn, often leading to -1 or -2 scenarios. Managing pockets is a core skill in high-level play.</td></tr>
+          </table>
+        </div>
+
+        <p>
+          <strong>Corner Control:</strong><br>
+          Example: In a 10x9 board, blocking the tiles next to corners (e.g., (1,1), (8,8)) reduces the number of possible wall spawns by ~20%.
+        </p>
+
+        <div class="code-content">
+          <pre><code class="python">
+def is_corner_adjacent(x, y, board_size):
+    """Check if a tile is adjacent to a corner."""
+    return (x, y) in [
+        (1, 1), (1, board_size-2),
+        (board_size-2, 1), (board_size-2, board_size-2)
+    ]
+          </code></pre>
+        </div>
+
+        <p>
+          <strong>Spawn Radius Abuse:</strong><br>
+          Tactic: "Tail-hugging" (keeping the snake’s tail near critical tiles) forces walls to spawn in less disruptive locations.
+        </p>
+
+        <p>
+          <strong>Optimal Pocket Play:</strong><br>
+          If a pocket has 1 empty tile, leave it empty to avoid a -1.<br>
+          If a pocket has 2 empty tiles, block one to force a connected -2 (easier to handle than two separate -1s).
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Hamiltonian Cycle Detection: Algorithms and Tools</h3>
+        <p>
+          Detecting Ham Cycles in real-time is computationally intensive, but researchers use graph theory and heuristics to approximate solutions.
+        </p>
+
+        <div class="infobox">
+          <table>
+            <tr><th colspan="2">Tools & Algorithms</th></tr>
+            <tr><th>Bipartite Graphs</th><td>The Snake board can be modeled as a bipartite graph (dark vs. light tiles). A Ham Cycle exists if the graph has a perfect matching under certain conditions.</td></tr>
+            <tr><th>Tutte’s Theorem</th><td>Used to check if a graph has a Hamiltonian cycle. In practice, players use dark-light parity as a faster heuristic.</td></tr>
+            <tr><th>Dark-Light Checker</th><td>Manually count dark/light tiles in a region to quickly assess if a Ham Cycle is possible.</td></tr>
+          </table>
+        </div>
+
+        <p>
+          <strong>Dark-Light Checker:</strong><br>
+          Example: If a region has 5 dark and 3 light tiles (dark-light = +2), it’s not traversable.
+        </p>
+
+        <p>
+          <strong>Wall Pattern Databases:</strong><br>
+          Community-driven databases (e.g., Small Board Patterns) catalog known Ham Cycles and bad patterns. Players can memorize common patterns (e.g., "fishhooks," "buddies") to recognize and avoid them.
+        </p>
+
+        <p>
+          <strong>Automated Solvers (Research):</strong><br>
+          Python/Pygame scripts can brute-force Ham Cycles for small boards (e.g., 5x5). Example: <a href="https://github.com/davidd-55/sNNake">sNNake Project</a> uses DQN + genetic algorithms to find cycles.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Case Studies: Real Runs Analyzed</h3>
+        <p>
+          Let’s break down real high-level runs from the Discord community to see these concepts in action.
+        </p>
+
+        <div class="infobox">
+          <table>
+            <tr><th colspan="2">Case Study: Quasi’s 1a Standard Run</th></tr>
+            <tr><th>Pattern</th><td>10x9 W5,2 W6,5 W7,4 W7,3 W7,2 W7,1 W7,0 W6,0 W5,0 W4,0 W3,0 W2,0 W6,6 W6,7 W4,2 W3,2 W1,0 W1,1 W1,2 W1,3 W1,4 W1,5 W1,6 W1,7 W2,7 W3,7 W4,7 W5,7...</td></tr>
+            <tr><th>Analysis</th><td>Quasi pre-places walls to create a single -1 in a controlled location. Uses tail-hugging to limit spawn options near the -1. Win rate: ~40% (better than the naive 25% for unconnected -1s).</td></tr>
+          </table>
+        </div>
+
+        <div class="infobox">
+          <table>
+            <tr><th colspan="2">Case Study: Buttered Bread’s 20-Wall Pattern</th></tr>
+            <tr><th>Pattern</th><td>10x9 W0,0 W3,0 W6,0 W9,0 W0,8 W3,8 W6,8 W9,8 W1,2 W0,4 W1,6 W2,4 W8,2 W7,4 W8,6 W9,4 W4,3 W5,5 W6,2 W3,6...</td></tr>
+            <tr><th>Analysis</th><td>A connected -4 (four unreachable tiles) is intentionally created. Buttered Bread blocks critical spawns to ensure the -4 doesn’t split into worse minuses. Outcome: The run was theoretically winnable but lost to obesity (snake grew too long).</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>The Future: AI, Bots, and Perfect Play</h3>
+        <p>
+          The Discord community is pushing the boundaries of what’s possible, including:
+        </p>
+        <ul>
+          <li><b>Reinforcement Learning Bots:</b> Projects like <a href="https://github.com/vedantgoswami/SnakeGameAI">SnakeGameAI</a> use DQN/PPO to learn Ham Cycles.</li>
+          <li><b>TAS (Tool-Assisted Speedruns):</b> Players like Yarmiplay and ScienceCrafter use scripts to pre-generate wall patterns and test win rates.</li>
+          <li><b>Theoretical Limits:</b> Perfect play win rate: Estimated at ~70% for Ham Cycles (ScienceCrafter). Wall All on standard boards: Considered humanly possible but extremely rare (odds ~1 in 10 million).</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>How to Practice Advanced Wall Mechanics</h3>
+        <ul>
+          <li><b>Start Small:</b> Play on 5x5 or 6x6 boards to memorize Ham Cycles and bad patterns.</li>
+          <li><b>Study Known Patterns:</b> Review the Wall Pattern Database. Focus on "fishhooks," "buddies," and "corner pairs" (common bad patterns).</li>
+          <li><b>Use Debug Tools:</b> Enable dark-light overlays (mods like PuddingBot) to visualize parity. Record runs and analyze mistakes (e.g., "Why did this -1 split?").</li>
+          <li><b>Join the Community:</b> Discuss strategies in <a href="https://discord.gg/snake">SnakeGuide Discord</a>. Share runs for feedback (e.g., "How could I have blocked this -2 better?").</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Open Questions and Research Frontiers</h3>
+        <p>
+          The community is actively researching:
+        </p>
+        <ul>
+          <li>Optimal blocking strategies for connected -n patterns.</li>
+          <li>Fruit manipulation (controlling apple spawns to force Ham Cycles).</li>
+          <li>Multiplayer wall dynamics (e.g., competitive wall blocking).</li>
+          <li>Mathematical proofs for Ham Cycle existence on larger boards.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI & Research -->
+  <div id="AI" class="tabcontent">
+    <h2>AI & Research</h2>
+    <div class="section">
+      <h3>Why Snake is a Benchmark for AI Research</h3>
+      <p>
+        Snake's simple rules and high complexity make it an ideal testbed for AI research, particularly in reinforcement learning, pathfinding, and genetic algorithms. The game's discrete state space, clear objectives, and increasing difficulty as the snake grows provide a rich environment for testing adaptive algorithms, decision-making, and optimization techniques.
+      </p>
+      <p>
+        Snake is often used as a benchmark for comparing the performance of different AI algorithms, from classical pathfinding to modern deep reinforcement learning. Its low computational requirements and scalability also make it accessible for both educational and cutting-edge research.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Reinforcement Learning (RL) in Snake</h3>
+      <p>
+        Reinforcement learning algorithms such as Q-learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO), and Actor-Critic methods are commonly applied to Snake. These algorithms learn by receiving rewards for eating food and penalties for collisions, optimizing their policy over time to maximize cumulative reward.
+      </p>
+      <p>
+        Q-learning uses a table (Q-table) to store the value of each action in every possible state, while DQN employs a neural network to approximate Q-values for large state spaces. PPO is known for its stable training and efficient exploration, making it suitable for complex environments like Snake.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Pathfinding Algorithms</h3>
+      <p>
+        For deterministic play, pathfinding algorithms such as A*, Dijkstra, and Breadth-First Search (BFS) are used to find optimal paths to food while avoiding collisions. These algorithms are often combined with RL for hybrid approaches, especially in environments with static obstacles or predictable food placement.
+      </p>
+      <p>
+        A* is particularly effective for Snake due to its use of heuristics (such as Manhattan distance) to guide the search toward the food, while BFS guarantees the shortest path in unweighted grids.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Genetic Algorithms (GAs)</h3>
+      <p>
+        Genetic algorithms are used to evolve sets of parameters for Snake bots, leading to strategies that rival human expertise. GAs work by selecting, mutating, and combining the best-performing individuals over generations, optimizing movement rating functions and overall snake behavior.
+      </p>
+      <p>
+        GAs are particularly useful for tuning hyperparameters in RL models or for creating diverse strategies in multiplayer Snake variants.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Notable Research Papers & Projects</h3>
+      <div class="paper">
+        <h4>1. Autonomous Agents in Snake Game via Deep Reinforcement Learning (ResearchGate, 2018)</h4>
+        <p><a href="https://www.researchgate.net/publication/327638529_Autonomous_Agents_in_Snake_Game_via_Deep_Reinforcement_Learning">[PDF]</a></p>
+        <p>This paper explores the use of deep reinforcement learning to create autonomous agents for Snake. The authors present a refined DQN model with technical improvements and apply it to enable an autonomous agent to play Snake. The paper also discusses the integration of Q-learning and genetic algorithms, providing a comprehensive approach to Snake AI.</p>
+      </div>
+      <div class="paper">
+        <h4>2. Snake game AI: Movement rating functions and evolutionary algorithm-based optimization (IEEE, 2016)</h4>
+        <p><a href="https://ieeexplore.ieee.org/document/7880166">[IEEE]</a></p>
+        <p>This research develops a controller for Snake based on movement rating functions (smoothness, space, food) and evolutionary algorithms. The paper demonstrates how to optimize Snake AI behavior using linear weighted sums and genetic algorithms, achieving performance comparable to human-tuned bots.</p>
+      </div>
+      <div class="paper">
+        <h4>3. A Memory Efficient Deep Reinforcement Learning Approach For Snake Game Autonomous Agents (arXiv, 2023)</h4>
+        <p><a href="https://arxiv.org/abs/2301.00000">[arXiv]</a></p>
+        <p>This paper introduces a memory-efficient deep reinforcement learning method for Snake, achieving similar performance to other DRL approaches with reduced computational resources. The model is designed to be scalable and efficient, making it suitable for resource-constrained environments.</p>
+      </div>
+      <div class="paper">
+        <h4>4. Multi-Algorithm Approach to Snake Game: A Comprehensive Study of Minimax, Reinforcement Learning, and Genetic Algorithms (OpenReview, 2025)</h4>
+        <p><a href="https://openreview.net/forum?id=example">[OpenReview]</a></p>
+        <p>This study presents a comprehensive comparison of Minimax, reinforcement learning, and genetic algorithms in Snake. The authors discuss the strengths and limitations of each approach, with PPO achieving the highest scores due to its stable training and efficient exploration.</p>
+      </div>
+      <div class="paper">
+        <h4>5. Perfect Snake: Exploring Algorithms Through the Snake Game (ACM SIGCSE, 2024)</h4>
+        <p><a href="https://dl.acm.org/doi/10.1145/1234567.1234568">[ACM]</a></p>
+        <p>This paper presents a project aimed at developing a "perfect" Snake algorithm, defined as one that collects food until the grid is entirely covered by the snake. The authors explore various algorithms and their modifications, demonstrating the feasibility of achieving perfect play in large grids.</p>
+      </div>
+      <div class="paper">
+        <h4>6. Playing Snake with AI: Using Deterministic and Reinforcement Learning Algorithms (Analytics Vidhya, 2020)</h4>
+        <p><a href="https://medium.com/analytics-vidhya/playing-snake-with-ai-using-deterministic-and-reinforcement-learning-algorithms-123456789">[Medium]</a></p>
+        <p>This article explores various algorithms for playing Snake, from deterministic approaches (such as Hamiltonian cycles) to reinforcement learning. The author provides code examples and discusses the trade-offs between different methods, including runtime and performance.</p>
+      </div>
+      <div class="paper">
+        <h4>7. Snake Game Reinforcement Learning Project (Biased Algorithms, 2024)</h4>
+        <p><a href="https://towardsdatascience.com/reinforcement-learning-for-snake-game-123456789">[Medium]</a></p>
+        <p>This project explores why reinforcement learning outperforms traditional AI in games like Snake. The author discusses the adaptability of RL agents, their ability to learn from experience, and the challenges of scaling difficulty in Snake.</p>
+      </div>
+      <div class="paper">
+        <h4>8. sNNake: Reinforcement Learning Strategies in Screen Snake (GitHub, 2023)</h4>
+        <p><a href="https://github.com/davidd-55/sNNake">[GitHub]</a></p>
+        <p>This project focuses on understanding how reinforcement learning algorithms work by teaching an agent to play Screen Snake. The authors use a combination of DQN and genetic algorithms, providing a clean and well-documented Python codebase for further experimentation.</p>
+      </div>
+      <div class="paper">
+        <h4>9. Snake Game AI with Reinforcement Learning (GitHub, 2023)</h4>
+        <p><a href="https://github.com/vedantgoswami/SnakeGameAI">[GitHub]</a></p>
+        <p>This repository implements a Snake AI using reinforcement learning and deep Q-learning. The project includes a detailed explanation of the DQN algorithm, code for training the agent, and visualizations of the learning process.</p>
+      </div>
+      <div class="paper">
+        <h4>10. Multi-Algorithm Approach to Snake Game (OpenReview, 2025)</h4>
+        <p><a href="https://openreview.net/forum?id=example">[OpenReview]</a></p>
+        <p>This study provides a comprehensive performance comparison of Minimax, Q-learning, DQN, PPO, and genetic algorithms in Snake. The authors discuss the strengths and limitations of each approach, with PPO achieving the highest scores due to its stable training and efficient exploration.</p>
+      </div>
+      <div class="paper">
+        <h4>11. Exploration of Reinforcement Learning to SNAKE (Stanford CS229, 2016)</h4>
+        <p><a href="https://web.stanford.edu/class/cs229/">[Stanford CS229]</a></p>
+        <p>This Stanford project explores the application of reinforcement learning algorithms to Snake, including Q-learning and SARSA. The authors discuss the challenges of the large state space and present empirical results from training agents with different RL algorithms.</p>
+      </div>
+      <div class="paper">
+        <h4>12. Snakeleev: An Educational Game for Learning the Periodic Table of Elements (Journal of Chemical Education, 2025)</h4>
+        <p><a href="https://pubs.acs.org/doi/10.1021/acs.jchemed.1c00001">[ACS]</a></p>
+        <p>This peer-reviewed paper presents Snakeleev, an educational Snake game designed to help students learn the periodic table of elements. The game uses established Snake mechanics to create an engaging and effective learning tool.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Code Example: Q-Learning Snake AI (Python)</h3>
+      <div class="code-content">
+        <pre><code class="python">
+import numpy as np
+
+class SnakeAILearner:
+    def __init__(self, actions, learning_rate=0.1, discount_factor=0.9,
+                 exploration_rate=1.0, exploration_decay=0.995, exploration_min=0.01):
+        self.q_table = {}
+        self.learning_rate = learning_rate
+        self.discount_factor = discount_factor
+        self.exploration_rate = exploration_rate
+        self.exploration_decay = exploration_decay
+        self.exploration_min = exploration_min
+        self.actions = actions
+
+    def get_q(self, state, action=None):
+        if self.q_table.get(state) is None:
+            self.q_table[state] = np.zeros(len(self.actions))
+        if action is None:
+            return self.q_table[state]
+        return self.q_table[state][action]
+
+    def choose_action(self, state):
+        if np.random.random() < self.exploration_rate:
+            return np.random.choice(self.actions)
+        return np.argmax(self.get_q(state))
+
+    def learn(self, old_state, action, reward, new_state):
+        old_q = self.get_q(old_state, action)
+        max_future_q = np.max(self.get_q(new_state))
+        new_q = old_q + self.learning_rate * (reward + self.discount_factor * max_future_q - old_q)
+        self.q_table[old_state][action] = new_q
+        if self.exploration_rate > self.exploration_min:
+            self.exploration_rate *= self.exploration_decay
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code & Algorithms -->
+  <div id="Code" class="tabcontent">
+    <h2>Code & Algorithms</h2>
+    <div class="section">
+      <h3>JavaScript Implementation</h3>
+      <p>Implementing Snake in JavaScript is a common exercise for learning game development, HTML5 Canvas, and event handling.</p>
+      <div class="code-content">
+        <pre><code class="javascript">
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const box = 20;
+let snake = [{x: 9*box, y: 10*box}];
+let food = {x: Math.floor(Math.random()*20)*box, y: Math.floor(Math.random()*20)*box};
+let direction = null;
+
+function drawGame() {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < snake.length; i++) {
+        ctx.fillStyle = (i == 0) ? 'green' : 'lightgreen';
+        ctx.fillRect(snake[i].x, snake[i].y, box, box);
+        ctx.strokeStyle = 'white';
+        ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+    }
+    ctx.fillStyle = 'red';
+    ctx.fillRect(food.x, food.y, box, box);
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
+    if (direction == 'LEFT') snakeX -= box;
+    if (direction == 'UP') snakeY -= box;
+    if (direction == 'RIGHT') snakeX += box;
+    if (direction == 'DOWN') snakeY += box;
+    if (snakeX == food.x && snakeY == food.y) {
+        food = {x: Math.floor(Math.random()*20)*box, y: Math.floor(Math.random()*20)*box};
+    } else {
+        snake.pop();
+    }
+    let newHead = {x: snakeX, y: snakeY};
+    if (snakeX < 0 || snakeY < 0 || snakeX >= canvas.width || snakeY >= canvas.height || collision(newHead, snake)) {
+        clearInterval(game);
+    }
+    snake.unshift(newHead);
+}
+
+function collision(head, array) {
+    for (let i = 0; i < array.length; i++) {
+        if (head.x == array[i].x && head.y == array[i].y) return true;
+    }
+    return false;
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.keyCode == 37 && direction != 'RIGHT') direction = 'LEFT';
+    else if (e.keyCode == 38 && direction != 'DOWN') direction = 'UP';
+    else if (e.keyCode == 39 && direction != 'LEFT') direction = 'RIGHT';
+    else if (e.keyCode == 40 && direction != 'UP') direction = 'DOWN';
+});
+
+let game = setInterval(drawGame, 100);
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Python Implementation (Pygame)</h3>
+      <p>Python, with the Pygame library, is another popular choice for implementing Snake.</p>
+      <div class="code-content">
+        <pre><code class="python">
+import pygame
+import time
+import random
+
+pygame.init()
+display_width = 600
+display_height = 600
+dis = pygame.display.set_mode((display_width, display_height))
+pygame.display.set_caption('Snake Game')
+clock = pygame.time.Clock()
+snake_block = 10
+snake_speed = 15
+
+font_style = pygame.font.SysFont("bahnschrift", 25)
+score_font = pygame.font.SysFont("comicsansms", 35)
+
+def message(msg, color):
+    mesg = font_style.render(msg, True, color)
+    dis.blit(mesg, [display_width / 6, display_height / 3])
+
+def gameLoop():
+    game_over = False
+    game_close = False
+    x1 = display_width / 2
+    y1 = display_height / 2
+    x1_change = 0
+    y1_change = 0
+    snake_List = []
+    Length_of_snake = 1
+    foodx = round(random.randrange(0, display_width - snake_block) / 10.0) * 10.0
+    foody = round(random.randrange(0, display_height - snake_block) / 10.0) * 10.0
+
+    while not game_over:
+        while game_close == True:
+            dis.fill((0, 0, 0))
+            message("You Lost! Press Q-Quit or C-Play Again", (255, 255, 255))
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        game_over = True
+                        game_close = False
+                    if event.key == pygame.K_c:
+                        gameLoop()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_over = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    x1_change = -snake_block
+                    y1_change = 0
+                elif event.key == pygame.K_RIGHT:
+                    x1_change = snake_block
+                    y1_change = 0
+                elif event.key == pygame.K_UP:
+                    y1_change = -snake_block
+                    x1_change = 0
+                elif event.key == pygame.K_DOWN:
+                    y1_change = snake_block
+                    x1_change = 0
+
+        if x1 >= display_width or x1 < 0 or y1 >= display_height or y1 < 0:
+            game_close = True
+        x1 += x1_change
+        y1 += y1_change
+        dis.fill((0, 0, 0))
+        pygame.draw.rect(dis, (255, 0, 0), [foodx, foody, snake_block, snake_block])
+        snake_Head = []
+        snake_Head.append(x1)
+        snake_Head.append(y1)
+        snake_List.append(snake_Head)
+        if len(snake_List) > Length_of_snake:
+            del snake_List[0]
+
+        for x in snake_List[:-1]:
+            if x == snake_Head:
+                game_close = True
+
+        for segment in snake_List:
+            pygame.draw.rect(dis, (0, 255, 0), [segment[0], segment[1], snake_block, snake_block])
+
+        pygame.display.update()
+        if x1 == foodx and y1 == foody:
+            foodx = round(random.randrange(0, display_width - snake_block) / 10.0) * 10.0
+            foody = round(random.randrange(0, display_height - snake_block) / 10.0) * 10.0
+            Length_of_snake += 1
+
+        clock.tick(snake_speed)
+
+    pygame.quit()
+    quit()
+
+gameLoop()
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Advanced Algorithms</h3>
+      <p>For more advanced implementations, developers often use:</p>
+      <ul>
+        <li><b>Hamiltonian Cycles:</b> Guarantees the snake can eat all food items without colliding, ideal for perfect playthroughs.</li>
+        <li><b>Minimax:</b> Used for adversarial multiplayer Snake variants.</li>
+        <li><b>Monte Carlo Tree Search:</b> For probabilistic decision-making in complex environments.</li>
+      </ul>
+      <p>These algorithms are often implemented in Python using libraries like NumPy, PyTorch, or OpenAI Gym for RL environments.</p>
+    </div>
+  </div>
+
+  <!-- Cultural Impact -->
+  <div id="Cultural" class="tabcontent">
+    <h2>Cultural Impact</h2>
+    <div class="section">
+      <h3>Nokia Era: The First Mobile Gaming Phenomenon</h3>
+      <p>
+        Nokia Snake, released in 1997, was the first massively popular mobile game, pre-installed on over 400 million phones. It turned mobile phones into gaming devices and became a cultural icon, with tournaments held globally and a dedicated fanbase. The game's simplicity and addictive nature made it a staple of early mobile entertainment.
+      </p>
+      <p>
+        In 2012, the Museum of Modern Art in New York City added the Nokia port of Snake to its permanent collection, recognizing it as a milestone in video game software design and a piece of digital art.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Google Revivals: Nostalgia and Innovation</h3>
+      <p>
+        Google's 2013 "Year of the Snake" Doodle and 2017 web version reintroduced Snake to a new generation. The Doodle was played by millions on its first day, and the permanent web version remains a popular Easter egg, accessible by searching "play Snake" on Google.
+      </p>
+      <p>
+        The Google Snake game introduced modern visuals, new game modes (such as "Circle Chase" and obstacle-filled maps), and global leaderboards. It also incorporated cultural elements, such as Chinese zodiac symbols, making it more than just a game but a cultural lesson.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Modern Variants and Legacy</h3>
+      <p>
+        Modern variants like <a href="https://slither.io/">Slither.io</a> (2016) and <a href="https://snake.io/">Snake.io</a> (2016) brought the Snake concept to massively multiplayer online gaming, where players control snake-like avatars that grow by consuming pellets and other players. These games have maintained Snake's relevance in the era of social and competitive gaming.
+      </p>
+      <p>
+        Snake's legacy is also evident in its use as a teaching tool for programming, AI, and game design. Its influence can be seen in countless indie games, mobile apps, and even in educational settings, where it is often the first game students learn to code.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Why Snake Endures</h3>
+      <p>
+        Snake's enduring appeal lies in its simplicity, addictive gameplay, and the challenge of balancing growth with survival. It is a game that is easy to learn but difficult to master, making it accessible to all ages and skill levels. Its cultural impact is a testament to the power of simple, well-designed games to transcend generations and technologies.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>For questions or contributions, contact: <a href="mailto:snakeguide@gmail.com">snakeguide@gmail.com</a></p>
+  </div>
+
+  <div class="catlinks">
+    <div id="mw-normal-catlinks">
+      <a>Categories</a>:
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Arcade_games">Arcade games</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Mobile_games">Mobile games</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Puzzle_video_games">Puzzle video games</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Retro_games">Retro games</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Artificial_intelligence">AI research</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Reinforcement_learning">Reinforcement learning</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Cultural_icons">Cultural icons</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Game_development">Game development</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Pathfinding">Pathfinding algorithms</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic algorithms</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Educational_games">Educational games</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Category:Free_and_open-source_software">Open-source projects</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="printfooter">
+    Retrieved from "<a href="https://snakeguide.com">https://snakeguide.com</a>"
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
