@@ -1,0 +1,188 @@
+1:"$Sreact.fragment"
+2:I[9922,["296","static/chunks/296-2fce548608040a64.js","441","static/chunks/app/references/page-b3478180767e8d04.js"],"DownloadText"]
+3:T1527,@misc{nxbfs,
+  author = {{NetworkX developers}},
+  title = {Single-source shortest paths},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.unweighted.single_source_shortest_path.html}
+}
+
+@misc{nxdijkstra,
+  author = {{NetworkX developers}},
+  title = {Dijkstra path},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.dijkstra_path.html}
+}
+
+@article{hart1968,
+  author = {Hart, Peter E. and Nilsson, Nils J. and Raphael, Bertram},
+  title = {A Formal Basis for the Heuristic Determination of Minimum Cost Paths},
+  year = {1968},
+  journal = {IEEE Transactions on Systems Science and Cybernetics},
+  volume = {4},
+  number = {2},
+  pages = {100--107},
+  doi = {10.1109/TSSC.1968.300136},
+  url = {https://www.cs.auckland.ac.nz/courses/compsci709s2c/resources/Mike.d/astarNilsson.pdf}
+}
+
+@misc{nxastar,
+  author = {{NetworkX developers}},
+  title = {A* path},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.astar.astar_path.html}
+}
+
+@article{itai1982,
+  author = {Itai, Alon and Papadimitriou, Christos H. and Szwarcfiter, Jayme Luiz},
+  title = {Hamilton Paths in Grid Graphs},
+  year = {1982},
+  journal = {SIAM Journal on Computing},
+  volume = {11},
+  number = {4},
+  pages = {676--686},
+  doi = {10.1137/0211056},
+  url = {https://csaws.cs.technion.ac.il/~itai/publications/Algorithms/Hamilton-paths.pdf}
+}
+
+@misc{tapsell2015,
+  author = {{John Tapsell}},
+  title = {Nokia 6110 Part 3 — Algorithms},
+  year = {2015},
+  howpublished = {Author implementation note},
+  url = {https://johnflux.com/2015/05/02/nokia-6110-part-3-algorithms/}
+}
+
+@misc{nxcut,
+  author = {{NetworkX developers}},
+  title = {Articulation points},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.components.articulation_points.html}
+}
+
+@inproceedings{silver2005,
+  author = {Silver, David},
+  title = {Cooperative Pathfinding},
+  year = {2005},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment},
+  volume = {1},
+  number = {1},
+  pages = {117--122},
+  doi = {10.1609/aiide.v1i1.18726},
+  url = {https://ojs.aaai.org/index.php/AIIDE/article/view/18726}
+}
+
+@misc{mnih2013,
+  author = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Graves, Alex and Antonoglou, Ioannis and Wierstra, Daan and Riedmiller, Martin},
+  title = {Playing Atari with Deep Reinforcement Learning},
+  year = {2013},
+  note = {NIPS Deep Learning Workshop},
+  doi = {10.48550/arXiv.1312.5602},
+  eprint = {1312.5602},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/1312.5602}
+}
+
+@misc{schulman2017,
+  author = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  title = {Proximal Policy Optimization Algorithms},
+  year = {2017},
+  note = {arXiv preprint},
+  doi = {10.48550/arXiv.1707.06347},
+  eprint = {1707.06347},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/1707.06347}
+}
+
+@inproceedings{ng1999,
+  author = {Ng, Andrew Y. and Harada, Daishi and Russell, Stuart},
+  title = {Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping},
+  year = {1999},
+  booktitle = {Proceedings of the Sixteenth International Conference on Machine Learning},
+  pages = {278--287},
+  publisher = {Morgan Kaufmann},
+  url = {https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf}
+}
+
+@inproceedings{henderson2018,
+  author = {Henderson, Peter and Islam, Riashat and Bachman, Philip and Pineau, Joelle and Precup, Doina and Meger, David},
+  title = {Deep Reinforcement Learning That Matters},
+  year = {2018},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {32},
+  number = {1},
+  doi = {10.1609/aaai.v32i1.11694},
+  eprint = {1709.06560},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/1709.06560}
+}
+
+@inproceedings{agarwal2021,
+  author = {Agarwal, Rishabh and Schwarzer, Max and Castro, Pablo Samuel and Courville, Aaron and Bellemare, Marc G.},
+  title = {Deep Reinforcement Learning at the Edge of the Statistical Precipice},
+  year = {2021},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {34},
+  eprint = {2108.13264},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2108.13264}
+}
+
+@misc{gymenv,
+  author = {{Farama Foundation}},
+  title = {Gymnasium Env API},
+  howpublished = {Official documentation},
+  url = {https://gymnasium.farama.org/api/env/}
+}
+
+@misc{numpyrng,
+  author = {{NumPy developers}},
+  title = {Random-number compatibility policy},
+  howpublished = {Official documentation},
+  url = {https://numpy.org/doc/stable/reference/random/compatibility.html}
+}
+
+@misc{battlesnakerules,
+  author = {{Battlesnake}},
+  title = {Battlesnake Game Rules},
+  howpublished = {Official rules},
+  url = {https://docs.battlesnake.com/rules}
+}
+
+@misc{battlesnakeruleset,
+  author = {{Battlesnake}},
+  title = {Battlesnake Ruleset API object},
+  howpublished = {Official documentation},
+  url = {https://docs.battlesnake.com/api/objects/ruleset}
+}8:X
+d:X
+d:C
+0:{"buildId":"miRzpiUzkqGGxC5tHxxgP","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"academic-width references-page","children":[["$","div",null,{"className":"academic-page-heading","children":[["$","h1",null,{"children":"Annotated bibliography"}],["$","p",null,{"children":"17 primary and official sources. Each record identifies the method it supports, its scope, and the notes that use it."}],["$","$L2",null,{"text":"$3","filename":"snakeguide-references.bib","children":"Download complete BibTeX bibliography"}]]}],"$L4","$L5"]}],null,"$L6"]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":"$L9","isPartial":"$@a","staleTime":"$8","varyParams":null},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$8","varyParams":"$d"},{"rsc":"$Le","isPartial":"$@f","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@10","rootVaryParams":null,"needsRuntimeRequest":"$@11"}
+12:I[415,["296","static/chunks/296-2fce548608040a64.js","441","static/chunks/app/references/page-b3478180767e8d04.js"],"default"]
+13:I[7894,[],"OutletBoundary"]
+14:"$Sreact.suspense"
+16:I[7894,[],"ViewportBoundary"]
+17:I[7894,[],"MetadataBoundary"]
+18:I[771,[],"IconMark"]
+19:I[3919,[],""]
+1a:I[403,[],""]
+1b:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Header"]
+1c:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Footer"]
+:HL["/_next/static/css/bccb565b80b6f7be.css","style"]
+:HL["/_next/static/css/1a08ea411c815873.css","style"]
+:HL["/_next/static/css/645c6e8a3fed3bdc.css","style"]
+4:["$","details",null,{"className":"source-policy","children":[["$","summary",null,{"children":"Verification and publication metadata"}],["$","p",null,{"children":"Sources were checked on 8 November 2026. Sixteen links opened directly. The Cooperative Pathfinding publisher record was verified through indexed publisher metadata; direct access encountered bot protection. Conference publication years are distinguished from initial arXiv submission dates. Unverified identifiers are omitted from the exported citations."}]]}]
+5:["$","$L12",null,{}]
+6:["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]
+9:["$","$1","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$14",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Annotated bibliography · SnakeGuide"}],["$","meta","1",{"name":"description","content":"Technical notes, primary literature, and reproducible experiments on Snake state representations, planning algorithms, and reinforcement learning."}],["$","link","2",{"rel":"shortcut icon","href":"/brand/snakeguide-logo.png"}],["$","link","3",{"rel":"icon","href":"/brand/snakeguide-logo.png","type":"image/png","sizes":"500x500"}],["$","link","4",{"rel":"apple-touch-icon","href":"/brand/snakeguide-logo.png"}],["$","$L18","5",{}]]}]}]}],null]}]
+b:["$","$1","c",{"children":[null,["$","$L19",null,{"parallelRouterKey":"children","template":["$","$L1a",null,{}]}]]}]
+e:["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bccb565b80b6f7be.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1a08ea411c815873.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/645c6e8a3fed3bdc.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"id":"top","children":[["$","a",null,{"className":"skip","href":"#main","children":"Skip to content"}],["$","$L1b",null,{}],["$","$L19",null,{"parallelRouterKey":"children","template":["$","$L1a",null,{}],"notFound":[["$","main",null,{"id":"main","className":"page-width empty-state","children":[["$","span",null,{"className":"eyebrow","children":"404 / OUTSIDE THE GRID"}],["$","h1",null,{"children":"This path ends here."}],["$","p",null,{"children":"The page does not exist in this edition."}],["$","a",null,{"href":"/articles","className":"button primary","children":"Return to the field guide →"}]]}],[]]}],["$","$L1c",null,{}]]}]}]]}]
+15:null
+11:true
+8:300
+8:C
+10:0
+a:"$undefined"
+c:"$undefined"
+f:"$undefined"
+7:"$undefined"

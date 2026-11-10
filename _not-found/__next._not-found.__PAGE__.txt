@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:I[7894,[],"OutletBoundary"]
+3:"$Sreact.suspense"
+7:I[7894,[],"ViewportBoundary"]
+8:I[7894,[],"MetadataBoundary"]
+9:I[771,[],"IconMark"]
+b:I[3919,[],""]
+c:I[403,[],""]
+f:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Header"]
+10:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Footer"]
+:HL["/_next/static/css/bccb565b80b6f7be.css","style"]
+:HL["/_next/static/css/1a08ea411c815873.css","style"]
+:HL["/_next/static/css/645c6e8a3fed3bdc.css","style"]
+6:X
+e:X
+e:C
+0:{"buildId":"miRzpiUzkqGGxC5tHxxgP","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"page-width empty-state","children":[["$","span",null,{"className":"eyebrow","children":"404 / OUTSIDE THE GRID"}],["$","h1",null,{"children":"This path ends here."}],["$","p",null,{"children":"The page does not exist in this edition."}],["$","a",null,{"href":"/articles","className":"button primary","children":"Return to the field guide →"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":"$@5","staleTime":"$6","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L7",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L8",null,{"children":["$","$3",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"SnakeGuide — Models, Planning & Learning"}],["$","meta","1",{"name":"description","content":"Technical notes, primary literature, and reproducible experiments on Snake state representations, planning algorithms, and reinforcement learning."}],["$","link","2",{"rel":"shortcut icon","href":"/brand/snakeguide-logo.png"}],["$","link","3",{"rel":"icon","href":"/brand/snakeguide-logo.png","type":"image/png","sizes":"500x500"}],["$","link","4",{"rel":"apple-touch-icon","href":"/brand/snakeguide-logo.png"}],["$","$L9","5",{}]]}]}]}],null]}],"isPartial":"$@a","staleTime":"$6","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$6","varyParams":"$e"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bccb565b80b6f7be.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1a08ea411c815873.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/645c6e8a3fed3bdc.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"id":"top","children":[["$","a",null,{"className":"skip","href":"#main","children":"Skip to content"}],["$","$Lf",null,{}],["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}],"notFound":[["$","main",null,{"id":"main","className":"page-width empty-state","children":[["$","span",null,{"className":"eyebrow","children":"404 / OUTSIDE THE GRID"}],["$","h1",null,{"children":"This path ends here."}],["$","p",null,{"children":"The page does not exist in this edition."}],["$","a",null,{"href":"/articles","className":"button primary","children":"Return to the field guide →"}]]}],[]]}],["$","$L10",null,{}]]}]}]]}],"isPartial":"$@11","staleTime":"$6","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@12","rootVaryParams":null,"needsRuntimeRequest":"$@13"}
+4:null
+6:300
+13:true
+6:C
+12:0
+a:"$undefined"
+d:"$undefined"
+11:"$undefined"
+5:"$undefined"

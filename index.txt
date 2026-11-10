@@ -1,0 +1,184 @@
+1:"$Sreact.fragment"
+2:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Header"]
+3:I[3919,[],""]
+4:I[403,[],""]
+5:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Footer"]
+c:I[5893,[],"default",1]
+:HL["/_next/static/css/bccb565b80b6f7be.css","style"]
+:HL["/_next/static/css/1a08ea411c815873.css","style"]
+:HL["/_next/static/css/645c6e8a3fed3bdc.css","style"]
+:HL["/brand/snakeguide-logo.png","image"]
+0:{"P":null,"c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bccb565b80b6f7be.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1a08ea411c815873.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/645c6e8a3fed3bdc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"id":"top","children":[["$","a",null,{"className":"skip","href":"#main","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"id":"main","className":"page-width empty-state","children":[["$","span",null,{"className":"eyebrow","children":"404 / OUTSIDE THE GRID"}],["$","h1",null,{"children":"This path ends here."}],["$","p",null,{"children":"The page does not exist in this edition."}],["$","a",null,{"href":"/articles","className":"button primary","children":"Return to the field guide →"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}]]}]}]]}],{"children":[["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"academic-home academic-width","children":[["$","section",null,{"className":"research-intro","children":[["$","div",null,{"children":[["$","h1",null,{"children":["$","span",null,{"className":"home-wordmark","children":[["$","img",null,{"src":"/brand/snakeguide-logo.png","width":56,"height":56,"alt":""}],"SnakeGuide"]}]}],["$","p",null,{"className":"research-subtitle","children":"State constraints, planning, and learning in Snake"}],["$","p",null,{"children":["SnakeGuide is a technical resource maintained by ",["$","a",null,{"href":"https://www.speedrun.com/users/nyidagyal","children":"Nyida Gyal"}],". It examines Snake as a sequential decision problem: how a moving body constrains a path, what an observation must preserve, and which guarantees survive a change of rules."]}],["$","p",null,{"children":["The collection connects ",["$","a",null,{"href":"/articles/formal-state","children":"formal models"}],", ",["$","a",null,{"href":"/articles/astar","children":"graph search"}],", ",["$","a",null,{"href":"/articles/hamiltonian-cycles","children":"Hamiltonian invariants"}],", and ",["$","a",null,{"href":"/articles/reinforcement-learning","children":"reinforcement learning"}]," through 18 technical notes, interactive figures, and an annotated primary-source bibliography."]}],["$","p",null,{"className":"intro-links","children":[["$","a",null,{"href":"#notes","children":"technical notes"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/experiments","children":"experiments"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/references","children":"bibliography"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/lab","children":"interactive lab"}]]}]]}],["$","figure",null,{"className":"intro-figure","children":[["$","img",null,{"className":"scientific-thumb research-teaser","src":"/research/figures/state-thumb.svg","width":240,"height":180,"alt":"Ordered snake segments after a legal move into the vacating tail.","loading":"lazy"}],["$","figcaption",null,{"children":["The ordered body is part of the state.",["$","br",null,{}],["$","a",null,{"href":"/articles/formal-state","children":"Read the formal specification →"}]]}]]}]]}],["$","section",null,{"className":"research-updates","children":[["$","h2",null,{"children":"Project notes"}],["$","dl",null,{"children":[["$","dt",null,{"children":"Nov 2026"}],["$","dd",null,{"children":["Released a ",["$","a",null,{"href":"/experiments","children":"reproducible static-search experiment"}]," with fixed seeds, matched inputs, and downloadable results."]}],["$","dt",null,{"children":"Nov 2026"}],["$","dd",null,{"children":"Technical collection: 18 explanatory notes and 17 annotated references. Notes are expository; paper records retain their original authors and venues."}]]}]]}],["$","figure",null,{"className":"scientific-plate home-scientific-plate","children":[["$","a",null,{"className":"scientific-plate-image","href":"/research/figures/search-landscape.svg","target":"_blank","rel":"noreferrer","aria-label":"Open full vector figure: Weighted path cost and search effort","children":["$","img",null,{"src":"/research/figures/search-landscape.svg","width":1200,"height":610,"alt":"Three heatmaps compare exact BFS, Dijkstra, and A* expansions, returned routes, terrain, and weighted costs on one fixed 10-by-8 board.","loading":"lazy","style":{"display":"block","width":"100%","height":"auto"}}]}],"$L6"]}],"$L7","$L8","$L9"]}],null,"$La"]}],{},null,false,null]},null,false,null],"$Lb",false]],"m":"$undefined","G":["$c",[]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"miRzpiUzkqGGxC5tHxxgP"}
+d:I[2556,["296","static/chunks/296-2fce548608040a64.js","974","static/chunks/app/page-b6470b6c44d9b99f.js"],"default"]
+e:I[9922,["296","static/chunks/296-2fce548608040a64.js","974","static/chunks/app/page-b6470b6c44d9b99f.js"],"CopyCitation"]
+11:I[9922,["296","static/chunks/296-2fce548608040a64.js","974","static/chunks/app/page-b6470b6c44d9b99f.js"],"DownloadText"]
+13:I[7894,[],"OutletBoundary"]
+14:"$Sreact.suspense"
+16:I[7894,[],"ViewportBoundary"]
+18:I[7894,[],"MetadataBoundary"]
+6:["$","figcaption",null,{"children":[["$","p",null,{"children":[["$","strong",null,{"children":["","Weighted path cost and search effort","."]}]," ","BFS, Dijkstra, and A* search the same weighted board at seed 2031. BFS returns 16 moves at cost 24; Dijkstra and A* return 18 moves at cost 22. A* expands 33 cells, compared with 62 for Dijkstra and 66 for BFS. Color encodes expansion order on a shared scale."]}],["$","div",null,{"className":"scientific-plate-meta","children":[["$","span",null,{"children":"Computed search traces"}],["$","a",null,{"href":"/research/figures/search-landscape.svg","target":"_blank","rel":"noreferrer","children":"Open SVG"}],["$","a",null,{"href":"/research/figures/search-landscape.svg","download":"search-landscape.svg","children":"Download SVG"}]]}]]}]
+7:["$","section",null,{"id":"notes","children":[["$","div",null,{"className":"academic-section-heading","children":[["$","h2",null,{"children":"Selected technical notes"}],["$","a",null,{"href":"/articles","children":"complete index"}]]}],["$","p",null,{"className":"section-description","children":"Definitions, algorithms, and evaluation methods. Highlighted entries are starting points for the collection."}],["$","$Ld",null,{"selected":true}]]}]
+8:["$","section",null,{"id":"literature","className":"literature-section","children":[["$","div",null,{"className":"academic-section-heading","children":[["$","h2",null,{"children":"Foundational literature"}],["$","a",null,{"href":"/references","children":"all 17 references"}]]}],["$","p",null,{"className":"section-description","children":"Selected external works that support the methods discussed here."}],[["$","article","hart-1968",{"className":"publication-entry literature-entry","children":[["$","div",null,{"className":"publication-figure","children":["$","img",null,{"className":"scientific-thumb research-teaser","src":"/research/figures/search-thumb.svg","width":240,"height":180,"alt":"A-star expansion heatmap with the measured route through a weighted grid.","loading":"lazy"}]}],["$","div",null,{"className":"publication-content","children":[["$","a",null,{"className":"publication-title","href":"https://www.cs.auckland.ac.nz/courses/compsci709s2c/resources/Mike.d/astarNilsson.pdf","target":"_blank","rel":"noreferrer","children":"A Formal Basis for the Heuristic Determination of Minimum Cost Paths"}],["$","div",null,{"children":"Peter E. Hart, Nils J. Nilsson, Bertram Raphael"}],["$","div",null,{"className":"publication-meta","children":[["$","em",null,{"children":"IEEE Transactions on Systems Science and Cybernetics"}],", ",1968]}],["$","div",null,{"className":"publication-links","children":[["$","a",null,{"href":"https://www.cs.auckland.ac.nz/courses/compsci709s2c/resources/Mike.d/astarNilsson.pdf","target":"_blank","rel":"noreferrer","children":"paper"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/articles/astar","children":"reading note"}],["$","span",null,{"children":"/"}],["$","$Le",null,{"text":"@article{hart1968,\n  author = {Hart, Peter E. and Nilsson, Nils J. and Raphael, Bertram},\n  title = {A Formal Basis for the Heuristic Determination of Minimum Cost Paths},\n  year = {1968},\n  journal = {IEEE Transactions on Systems Science and Cybernetics},\n  volume = {4},\n  number = {2},\n  pages = {100--107},\n  doi = {10.1109/TSSC.1968.300136},\n  url = {https://www.cs.auckland.ac.nz/courses/compsci709s2c/resources/Mike.d/astarNilsson.pdf}\n}"}]]}],["$","p",null,{"children":"Foundational heuristic graph search and A*."}]]}]]}],["$","article","itai-1982",{"className":"publication-entry literature-entry","children":[["$","div",null,{"className":"publication-figure","children":["$","img",null,{"className":"scientific-thumb research-teaser","src":"/research/figures/cycle-thumb.svg","width":240,"height":180,"alt":"A Hamiltonian cycle visits every cell, with a contiguous ordered snake body.","loading":"lazy"}]}],["$","div",null,{"className":"publication-content","children":[["$","a",null,{"className":"publication-title","href":"https://csaws.cs.technion.ac.il/~itai/publications/Algorithms/Hamilton-paths.pdf","target":"_blank","rel":"noreferrer","children":"Hamilton Paths in Grid Graphs"}],["$","div",null,{"children":"Alon Itai, Christos H. Papadimitriou, Jayme Luiz Szwarcfiter"}],["$","div",null,{"className":"publication-meta","children":[["$","em",null,{"children":"SIAM Journal on Computing"}],", ",1982]}],["$","div",null,{"className":"publication-links","children":[["$","a",null,{"href":"https://csaws.cs.technion.ac.il/~itai/publications/Algorithms/Hamilton-paths.pdf","target":"_blank","rel":"noreferrer","children":"paper"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/articles/hamiltonian-cycles","children":"reading note"}],["$","span",null,{"children":"/"}],["$","$Le",null,{"text":"@article{itai1982,\n  author = {Itai, Alon and Papadimitriou, Christos H. and Szwarcfiter, Jayme Luiz},\n  title = {Hamilton Paths in Grid Graphs},\n  year = {1982},\n  journal = {SIAM Journal on Computing},\n  volume = {11},\n  number = {4},\n  pages = {676--686},\n  doi = {10.1137/0211056},\n  url = {https://csaws.cs.technion.ac.il/~itai/publications/Algorithms/Hamilton-paths.pdf}\n}"}]]}],["$","p",null,{"children":"Grid bipartiteness, rectangular Hamilton paths, and NP-completeness for general grid Hamilton paths/circuits."}]]}]]}],"$Lf","$L10"]]}]
+12:T1527,@misc{nxbfs,
+  author = {{NetworkX developers}},
+  title = {Single-source shortest paths},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.unweighted.single_source_shortest_path.html}
+}
+
+@misc{nxdijkstra,
+  author = {{NetworkX developers}},
+  title = {Dijkstra path},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.dijkstra_path.html}
+}
+
+@article{hart1968,
+  author = {Hart, Peter E. and Nilsson, Nils J. and Raphael, Bertram},
+  title = {A Formal Basis for the Heuristic Determination of Minimum Cost Paths},
+  year = {1968},
+  journal = {IEEE Transactions on Systems Science and Cybernetics},
+  volume = {4},
+  number = {2},
+  pages = {100--107},
+  doi = {10.1109/TSSC.1968.300136},
+  url = {https://www.cs.auckland.ac.nz/courses/compsci709s2c/resources/Mike.d/astarNilsson.pdf}
+}
+
+@misc{nxastar,
+  author = {{NetworkX developers}},
+  title = {A* path},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.astar.astar_path.html}
+}
+
+@article{itai1982,
+  author = {Itai, Alon and Papadimitriou, Christos H. and Szwarcfiter, Jayme Luiz},
+  title = {Hamilton Paths in Grid Graphs},
+  year = {1982},
+  journal = {SIAM Journal on Computing},
+  volume = {11},
+  number = {4},
+  pages = {676--686},
+  doi = {10.1137/0211056},
+  url = {https://csaws.cs.technion.ac.il/~itai/publications/Algorithms/Hamilton-paths.pdf}
+}
+
+@misc{tapsell2015,
+  author = {{John Tapsell}},
+  title = {Nokia 6110 Part 3 — Algorithms},
+  year = {2015},
+  howpublished = {Author implementation note},
+  url = {https://johnflux.com/2015/05/02/nokia-6110-part-3-algorithms/}
+}
+
+@misc{nxcut,
+  author = {{NetworkX developers}},
+  title = {Articulation points},
+  howpublished = {Official documentation},
+  url = {https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.components.articulation_points.html}
+}
+
+@inproceedings{silver2005,
+  author = {Silver, David},
+  title = {Cooperative Pathfinding},
+  year = {2005},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment},
+  volume = {1},
+  number = {1},
+  pages = {117--122},
+  doi = {10.1609/aiide.v1i1.18726},
+  url = {https://ojs.aaai.org/index.php/AIIDE/article/view/18726}
+}
+
+@misc{mnih2013,
+  author = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Graves, Alex and Antonoglou, Ioannis and Wierstra, Daan and Riedmiller, Martin},
+  title = {Playing Atari with Deep Reinforcement Learning},
+  year = {2013},
+  note = {NIPS Deep Learning Workshop},
+  doi = {10.48550/arXiv.1312.5602},
+  eprint = {1312.5602},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/1312.5602}
+}
+
+@misc{schulman2017,
+  author = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  title = {Proximal Policy Optimization Algorithms},
+  year = {2017},
+  note = {arXiv preprint},
+  doi = {10.48550/arXiv.1707.06347},
+  eprint = {1707.06347},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/1707.06347}
+}
+
+@inproceedings{ng1999,
+  author = {Ng, Andrew Y. and Harada, Daishi and Russell, Stuart},
+  title = {Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping},
+  year = {1999},
+  booktitle = {Proceedings of the Sixteenth International Conference on Machine Learning},
+  pages = {278--287},
+  publisher = {Morgan Kaufmann},
+  url = {https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf}
+}
+
+@inproceedings{henderson2018,
+  author = {Henderson, Peter and Islam, Riashat and Bachman, Philip and Pineau, Joelle and Precup, Doina and Meger, David},
+  title = {Deep Reinforcement Learning That Matters},
+  year = {2018},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {32},
+  number = {1},
+  doi = {10.1609/aaai.v32i1.11694},
+  eprint = {1709.06560},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/1709.06560}
+}
+
+@inproceedings{agarwal2021,
+  author = {Agarwal, Rishabh and Schwarzer, Max and Castro, Pablo Samuel and Courville, Aaron and Bellemare, Marc G.},
+  title = {Deep Reinforcement Learning at the Edge of the Statistical Precipice},
+  year = {2021},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {34},
+  eprint = {2108.13264},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2108.13264}
+}
+
+@misc{gymenv,
+  author = {{Farama Foundation}},
+  title = {Gymnasium Env API},
+  howpublished = {Official documentation},
+  url = {https://gymnasium.farama.org/api/env/}
+}
+
+@misc{numpyrng,
+  author = {{NumPy developers}},
+  title = {Random-number compatibility policy},
+  howpublished = {Official documentation},
+  url = {https://numpy.org/doc/stable/reference/random/compatibility.html}
+}
+
+@misc{battlesnakerules,
+  author = {{Battlesnake}},
+  title = {Battlesnake Game Rules},
+  howpublished = {Official rules},
+  url = {https://docs.battlesnake.com/rules}
+}
+
+@misc{battlesnakeruleset,
+  author = {{Battlesnake}},
+  title = {Battlesnake Ruleset API object},
+  howpublished = {Official documentation},
+  url = {https://docs.battlesnake.com/api/objects/ruleset}
+}9:["$","section",null,{"className":"resource-section","children":[["$","h2",null,{"children":"Research resources"}],["$","div",null,{"className":"resource-row","children":[["$","strong",null,{"children":"Controlled experiments"}],["$","p",null,{"children":[["$","a",null,{"href":"/experiments","children":"Static search comparison"}]," · Matched inputs, a documented generator, route costs, expansion counts, and CSV/JSON exports."]}]]}],["$","div",null,{"className":"resource-row","children":[["$","strong",null,{"children":"Reference simulation"}],["$","p",null,{"children":[["$","a",null,{"href":"/lab","children":"Interactive lab"}]," · Inspect pathfinding, Hamiltonian traversal, and a deterministic Snake transition system."]}]]}],["$","div",null,{"className":"resource-row","children":[["$","strong",null,{"children":"Reference collection"}],["$","p",null,{"children":[["$","$L11",null,{"text":"$12","filename":"snakeguide-references.bib","children":"Download BibTeX"}]," · Eight research papers, official documentation, and an implementation account."]}]]}]]}]
+a:["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]
+b:["$","$1","h",{"children":[null,["$","$L16",null,{"children":"$L17"}],["$","div",null,{"hidden":true,"children":["$","$L18",null,{"children":["$","$14",null,{"name":"Next.Metadata","children":"$L19"}]}]}],null]}]
+f:["$","article","ng-1999",{"className":"publication-entry literature-entry","children":[["$","div",null,{"className":"publication-figure","children":["$","img",null,{"className":"scientific-thumb research-teaser","src":"/research/figures/reward-thumb.svg","width":240,"height":180,"alt":"Positive and negative potential-shaping contributions cancel in adjacent columns.","loading":"lazy"}]}],["$","div",null,{"className":"publication-content","children":[["$","a",null,{"className":"publication-title","href":"https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf","target":"_blank","rel":"noreferrer","children":"Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping"}],["$","div",null,{"children":"Andrew Y. Ng, Daishi Harada, Stuart Russell"}],["$","div",null,{"className":"publication-meta","children":[["$","em",null,{"children":"Proceedings of the Sixteenth International Conference on Machine Learning"}],", ",1999]}],["$","div",null,{"className":"publication-links","children":[["$","a",null,{"href":"https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf","target":"_blank","rel":"noreferrer","children":"paper"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/articles/reward-shaping","children":"reading note"}],["$","span",null,{"children":"/"}],["$","$Le",null,{"text":"@inproceedings{ng1999,\n  author = {Ng, Andrew Y. and Harada, Daishi and Russell, Stuart},\n  title = {Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping},\n  year = {1999},\n  booktitle = {Proceedings of the Sixteenth International Conference on Machine Learning},\n  pages = {278--287},\n  publisher = {Morgan Kaufmann},\n  url = {https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf}\n}"}]]}],["$","p",null,{"children":"Potential-based reward shaping preserves optimal policies under the theorem's MDP and boundary assumptions."}]]}]]}]
+10:["$","article","agarwal-2021",{"className":"publication-entry literature-entry","children":[["$","div",null,{"className":"publication-figure","children":["$","img",null,{"className":"scientific-thumb research-teaser","src":"/research/figures/evaluation-thumb.svg","width":240,"height":180,"alt":"Paired A-star and Dijkstra cell expansions for twenty solved benchmark cases.","loading":"lazy"}]}],["$","div",null,{"className":"publication-content","children":[["$","a",null,{"className":"publication-title","href":"https://arxiv.org/abs/2108.13264","target":"_blank","rel":"noreferrer","children":"Deep Reinforcement Learning at the Edge of the Statistical Precipice"}],["$","div",null,{"children":"Rishabh Agarwal, Max Schwarzer, Pablo Samuel Castro, Aaron Courville, Marc G. Bellemare"}],["$","div",null,{"className":"publication-meta","children":[["$","em",null,{"children":"Advances in Neural Information Processing Systems"}],", ",2021]}],["$","div",null,{"className":"publication-links","children":[["$","a",null,{"href":"https://arxiv.org/abs/2108.13264","target":"_blank","rel":"noreferrer","children":"paper"}],["$","span",null,{"children":"/"}],["$","a",null,{"href":"/articles/reproducible-evaluation","children":"reading note"}],["$","span",null,{"children":"/"}],["$","$Le",null,{"text":"@inproceedings{agarwal2021,\n  author = {Agarwal, Rishabh and Schwarzer, Max and Castro, Pablo Samuel and Courville, Aaron and Bellemare, Marc G.},\n  title = {Deep Reinforcement Learning at the Edge of the Statistical Precipice},\n  year = {2021},\n  booktitle = {Advances in Neural Information Processing Systems},\n  volume = {34},\n  eprint = {2108.13264},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2108.13264}\n}"}]]}],["$","p",null,{"children":"Interval estimates, performance profiles and robust aggregation help evaluate limited-run RL experiments."}]]}]]}]
+17:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[771,[],"IconMark"]
+15:null
+19:[["$","title","0",{"children":"SnakeGuide — Models, Planning & Learning"}],["$","meta","1",{"name":"description","content":"Technical notes, primary literature, and reproducible experiments on Snake state representations, planning algorithms, and reinforcement learning."}],["$","link","2",{"rel":"shortcut icon","href":"/brand/snakeguide-logo.png"}],["$","link","3",{"rel":"icon","href":"/brand/snakeguide-logo.png","type":"image/png","sizes":"500x500"}],["$","link","4",{"rel":"apple-touch-icon","href":"/brand/snakeguide-logo.png"}],["$","$L1a","5",{}]]
