@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:I[2556,["296","static/chunks/296-2fce548608040a64.js","292","static/chunks/app/articles/page-aa7d0c30c6cc7ddd.js"],"default"]
+3:I[7894,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[7894,[],"ViewportBoundary"]
+9:I[7894,[],"MetadataBoundary"]
+a:I[771,[],"IconMark"]
+c:I[3919,[],""]
+d:I[403,[],""]
+10:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Header"]
+11:I[432,["296","static/chunks/296-2fce548608040a64.js","177","static/chunks/app/layout-bc135bdfb38b0024.js"],"Footer"]
+:HL["/_next/static/css/bccb565b80b6f7be.css","style"]
+:HL["/_next/static/css/1a08ea411c815873.css","style"]
+:HL["/_next/static/css/645c6e8a3fed3bdc.css","style"]
+7:X
+f:X
+f:C
+0:{"buildId":"miRzpiUzkqGGxC5tHxxgP","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"academic-width notes-page","children":[["$","div",null,{"className":"academic-page-heading","children":[["$","h1",null,{"children":"Technical notes"}],["$","p",null,{"children":"18 notes on state representation, planning, learning, and experimental design. Each entry includes a full explanation, an interactive figure, and its supporting references."}]]}],["$","$L2",null,{}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Technical notes · SnakeGuide"}],["$","meta","1",{"name":"description","content":"Technical notes, primary literature, and reproducible experiments on Snake state representations, planning algorithms, and reinforcement learning."}],["$","link","2",{"rel":"shortcut icon","href":"/brand/snakeguide-logo.png"}],["$","link","3",{"rel":"icon","href":"/brand/snakeguide-logo.png","type":"image/png","sizes":"500x500"}],["$","link","4",{"rel":"apple-touch-icon","href":"/brand/snakeguide-logo.png"}],["$","$La","5",{}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$7","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bccb565b80b6f7be.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1a08ea411c815873.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/645c6e8a3fed3bdc.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"id":"top","children":[["$","a",null,{"className":"skip","href":"#main","children":"Skip to content"}],["$","$L10",null,{}],["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","main",null,{"id":"main","className":"page-width empty-state","children":[["$","span",null,{"className":"eyebrow","children":"404 / OUTSIDE THE GRID"}],["$","h1",null,{"children":"This path ends here."}],["$","p",null,{"children":"The page does not exist in this edition."}],["$","a",null,{"href":"/articles","className":"button primary","children":"Return to the field guide →"}]]}],[]]}],["$","$L11",null,{}]]}]}]]}],"isPartial":"$@12","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@13","rootVaryParams":null,"needsRuntimeRequest":"$@14"}
+5:null
+7:300
+14:true
+7:C
+13:0
+b:"$undefined"
+e:"$undefined"
+12:"$undefined"
+6:"$undefined"
